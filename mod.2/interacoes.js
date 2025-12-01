@@ -1,0 +1,1 @@
+/* Interações e Funcionalidades do site */
