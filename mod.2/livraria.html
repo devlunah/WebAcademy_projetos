@@ -1,8 +1,7 @@
 <!-- Site para serviços de uma livraria local -->
-<!-- Lista de Serviços usando <ul> ou <ol> -->
-<!-- Tabela de horários de atendimento -->
-<!-- Formulário de orçamento, com os campos: nome, e-mail, tipo de serviço e descrição do pedido -->
-<!-- Links externos e internos -->
+    <!-- Lista de Serviços usando <ul> ou <ol> -->
+    <!-- Tabela de horários de atendimento -->
+    <!-- Links externos e internos -->
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -18,8 +17,11 @@
 <body>
 
     <nav>
-        <button id="modoEscuroBtn">Aplicar Modo Escuro</button>
+        <a href="orcamento.html" id="btnOrcamento" class="header_button">Fazer Orçamento</a>
+        <button id="modoEscuroBtn" class="header_button">Aplicar Modo Escuro</button>
         <button id="trocarImgBtn" class="header_button">Mudar Banner</button>
+        <button id="contadorBtn" class="header_button">Clique Contador</button>
+        
     </nav>
 
     <header>
@@ -34,23 +36,58 @@
 
     <main>
 
-        <!-- Serviços -->
-        <section> 
+        <div class="container">
+            <!-- Serviços -->
+            <section>
+                <h2>Serviços Disponíveis</h2>
+            
+                <ul>
+                    <li>Venda de livros novos</li>
+                    <li>Café especial</li>
+                    <li>Espaço de leitura pet friendly</li>
+                    <li>Eventos literários</li>
+                </ul>
+            
+            </section>
+            
+            <!-- Horários -->
+            <section>
+                <h2>Horários de Atendimento</h2>
+            
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr>
+                            <td>Seg - Sex</td>
+                            <td>08:00 - 18:00</td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>09:00 - 14:00</td>
+                        </tr>
+                        <tr>
+                            <td>Domingo</td>
+                            <td>Fechado</td>
+                        </tr>
+                    </tbody>
+                </table>
+            
+            </section>
 
-        </section>
+        </div>
 
-        <!-- Tabela -->
-        <section> 
-
-        </section>
-
-        <!-- Formulário -->
-        <section> 
-
-        </section>
+        <p>
+            Visite nosso Instagram:
+            <a href="https://www.instagram.com/wwclunah/" target="_blank">Clique aqui</a>
+        </p>
 
     </main>
-
 
     <footer>
         <p>© 2025 Paws & Pages Café</p>

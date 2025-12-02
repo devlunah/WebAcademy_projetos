@@ -1,6 +1,5 @@
 /* Layout do site */
 
-/* === Paleta de cores com variáveis === */
 :root {
     --cor-primaria: #d67cb8;
     --cor-secundaria: #af4062;
@@ -10,11 +9,7 @@
     --escuro-texto: #e1e1e1;
 }
 
-/* === Modo escuro === */
-.dark-mode {
-    background-color: var(--escuro-fundo);
-    color: var(--escuro-texto);
-}
+/**/
 
 body {
     font-family: Arial, sans-serif;
@@ -23,42 +18,57 @@ body {
     margin: 0;
 }
 
-/* === Header === */
-header {
-    background-color: var(--cor-fundo);
-    color: var(--cor-primaria);
-    text-align: center;
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    max-width: 1600px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.header_button {
-    margin: 5px;
-}
+/**/
 
 nav {
     background-color: var(--cor-primaria);
     color: white;
     text-align: right;
     padding: 10px;
-
 }
 
-/* === Banner === */
+.header_button {
+    margin: 5px;
+}
+
+header {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    text-align: center;
+}
+
+/**/
+
 #banner img {
     width: 20%;
     max-height: 280px;
-    text-align: center;
     border-radius: 10px;
     box-shadow: 0 4px 8px #0003;
 }
 
-/* === Estilo de imagens gerais === */
-img {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px #0004;
+/**/
+
+.lista-servicos {
+    margin: 0;
+    padding: 0;
 }
 
-/* === Lista com ícones personalizados === */
 .lista-servicos li {
     list-style: none;
     margin-left: 0;
@@ -66,33 +76,45 @@ img {
     position: relative;
 }
 
-.lista-servicos li::before {
-    content: "📚";
-    position: absolute;
-    left: 0;
-}
 
-/* === Tabela === */
+
+/**/
+
 table {
-    width: 50%;
+    width: 100%;
     border-collapse: collapse;
 }
 
-th, td {
+th,
+td {
     border: 1px solid #888;
     padding: 8px;
 }
 
 thead {
     background-color: var(--cor-secundaria);
+    color: white;
 }
 
-/* Efeito zebra */
-tbody tr:nth-child(even) {
-    background-color: #eee;
+/**/
+
+.header_button {
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    /* tira o sublinhado */
+    font-weight: bold;
+    transition: 0.2s;
+    border: none;
 }
 
-/* === Formulário === */
+.header_button:hover {
+    background-color: #8f314f;
+    cursor: pointer;
+}
+
 form {
     width: 50%;
     display: flex;
@@ -100,7 +122,9 @@ form {
     gap: 10px;
 }
 
-input, textarea, select {
+input,
+textarea,
+select {
     padding: 8px;
     border: 2px solid var(--cor-primaria);
     border-radius: 5px;
@@ -118,20 +142,68 @@ button:hover {
     background-color: var(--cor-secundaria);
 }
 
-/* Área de erros */
 #erros {
     color: red;
     margin-bottom: 10px;
 }
 
-/* === Responsividade === */
+/**/
+
+.modo-escuro {
+    background-color: var(--escuro-fundo);
+    color: var(--escuro-texto);
+}
+
+.modo-escuro header,
+.modo-escuro footer {
+    background-color: #272727;
+}
+
+.modo-escuro a {
+    color: #ffdd99;
+}
+
+.erro {
+    color: #d11;
+    margin: 4px 0;
+}
+
+.sucesso {
+    color: #0a0;
+    margin: 4px 0;
+}
+
+/**/
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 80px;
+    /* distância harmoniosa */
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.container section {
+    flex: 1;
+}
+
+/**/
+
 @media (max-width: 768px) {
 
-    table, form {
+    .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    form {
         width: 100%;
     }
 
-    header {
-        font-size: 0.9rem;
+    #banner img {
+        width: 60%;
     }
 }
